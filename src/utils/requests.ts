@@ -14,7 +14,7 @@ const signIn = async ({
   password: string;
 }) => {
   const response = await useApi<ApiSignIn>(
-    'auth/signIn',
+    'auth/signin',
     'POST',
     { email, password },
     false
