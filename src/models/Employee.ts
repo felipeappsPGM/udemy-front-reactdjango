@@ -11,7 +11,7 @@ export type EmployeeDetail = Employee & {
 };
 
 export type ApiGetEmployees = {
-  employee: Employee[];
+  employees: Employee[];
 };
 
 export type ApiGetEmployee = EmployeeDetail;

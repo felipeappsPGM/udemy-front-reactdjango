@@ -46,7 +46,7 @@ export const useAuth = () => {
     if (!response.detail) {
       dispatch(setUser(response.data.user));
       dispatch(setUserEnterprise(response.data.enterprise));
-
+      //console.log('csdsvd', response.data.access);
       localStorage.setItem(LOCAL_STORAGE_KEY, response.data.access);
     }
 

@@ -26,8 +26,9 @@ type Props = {
 };
 
 const EmployeesTable = ({ employeesList, refreshList }: Props) => {
+  console.log(employeesList);
   const { handlePermissionsExists } = useAuth();
-  console.log(handlePermissionsExists);
+
   const { deleteEmployee } = useRequests();
 
   const theme = useTheme();
@@ -86,10 +87,9 @@ const EmployeesTable = ({ employeesList, refreshList }: Props) => {
                           }}
                           color="inherit"
                           size="small"
+                          onClick={() => handleEditEmployee(employee.id)}
                         >
-                          <EditTwoToneIcon
-                            onClick={() => handleEditEmployee(employee.id)}
-                          />
+                          <EditTwoToneIcon />
                         </IconButton>
                       </Tooltip>
                     )}
@@ -105,10 +105,9 @@ const EmployeesTable = ({ employeesList, refreshList }: Props) => {
                           }}
                           color="inherit"
                           size="small"
+                          onClick={() => handleDeleteEmployee(employee.id)}
                         >
-                          <DeleteTwoTone
-                            onClick={() => handleDeleteEmployee(employee.id)}
-                          />
+                          <DeleteTwoTone />
                         </IconButton>
                       </Tooltip>
                     )}

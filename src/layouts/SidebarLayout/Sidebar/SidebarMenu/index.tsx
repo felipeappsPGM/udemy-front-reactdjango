@@ -31,7 +31,7 @@ import ChromeReaderModeTwoToneIcon from '@mui/icons-material/ChromeReaderModeTwo
 import WorkspacePremiumTwoToneIcon from '@mui/icons-material/WorkspacePremiumTwoTone';
 import CameraFrontTwoToneIcon from '@mui/icons-material/CameraFrontTwoTone';
 import DisplaySettingsTwoToneIcon from '@mui/icons-material/DisplaySettingsTwoTone';
-import { Add, Tune } from '@mui/icons-material';
+import { Add, Group, PersonAddAlt1, Tune } from '@mui/icons-material';
 
 const MenuWrapper = styled(Box)(
   ({ theme }) => `
@@ -199,6 +199,7 @@ function SidebarMenu() {
           </SubMenuWrapper>
         </List>
 
+        {/* sidebar menu cargos */}
         <List
           component="div"
           subheader={
@@ -229,6 +230,44 @@ function SidebarMenu() {
                   startIcon={<Add />}
                 >
                   Adicionar
+                </Button>
+              </ListItem>
+            </List>
+          </SubMenuWrapper>
+        </List>
+
+        {/* sidebar menu employees */}
+        <List
+          component="div"
+          subheader={
+            <ListSubheader component="div" disableSticky>
+              Employees
+            </ListSubheader>
+          }
+        >
+          <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/employees"
+                  startIcon={<Group />}
+                >
+                  Gerenciar Employees
+                </Button>
+              </ListItem>
+
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/employees-add"
+                  startIcon={<PersonAddAlt1 />}
+                >
+                  Adicionar Employees
                 </Button>
               </ListItem>
             </List>

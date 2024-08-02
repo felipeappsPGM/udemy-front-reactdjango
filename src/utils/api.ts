@@ -17,7 +17,9 @@ export const useApi = async <TypeDataResponse>(
   // lógica de authentication
   const access_token = handleGetAccessToken();
   let headers = {};
+  
   if(withAuth && access_token) {
+    
     headers['Authorization'] = `Bearer ${access_token}`;
   }
   try {

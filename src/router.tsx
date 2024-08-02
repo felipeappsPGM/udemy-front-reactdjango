@@ -26,6 +26,14 @@ const AddGroups = Loader(lazy(() => import('src/content/pages/Groups/Add')));
 //Edit Groups
 const EditGroups = Loader(lazy(() => import('src/content/pages/Groups/Edit')));
 
+// Employees
+const Employees = Loader(
+  lazy(() => import('src/content/pages/Employees/Employees'))
+);
+const AddEmployees = Loader(
+  lazy(() => import('src/content/pages/Employees/Add'))
+);
+
 // Pages
 
 const Overview = Loader(lazy(() => import('src/content/overview')));
@@ -116,6 +124,22 @@ const routes: RouteObject[] = [
           {
             path: 'groups/edit/:id',
             element: <EditGroups />
+          }
+        ]
+      },
+
+      // Employees
+      {
+        path: '',
+        element: <SidebarLayout />,
+        children: [
+          {
+            path: 'employees',
+            element: <Employees />
+          },
+          {
+            path: 'employees-add',
+            element: <AddEmployees />
           }
         ]
       },

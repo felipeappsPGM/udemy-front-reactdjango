@@ -81,10 +81,9 @@ const GroupsTable = ({ groupsList, refreshList }: Props) => {
                           }}
                           color="inherit"
                           size="small"
+                          onClick={() => handleEditGroup(group.id)}
                         >
-                          <EditTwoToneIcon
-                            onClick={() => handleEditGroup(group.id)}
-                          />
+                          <EditTwoToneIcon />
                         </IconButton>
                       </Tooltip>
                     )}
@@ -100,10 +99,9 @@ const GroupsTable = ({ groupsList, refreshList }: Props) => {
                           }}
                           color="inherit"
                           size="small"
+                          onClick={() => handleDeleteGroup(group.id)}
                         >
-                          <DeleteTwoTone
-                            onClick={() => handleDeleteGroup(group.id)}
-                          />
+                          <DeleteTwoTone />
                         </IconButton>
                       </Tooltip>
                     )}

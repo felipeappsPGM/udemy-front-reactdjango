@@ -19,6 +19,7 @@ const signIn = async ({
     { email, password },
     false
   );
+  console.log(response);
   return response;
 };
 
