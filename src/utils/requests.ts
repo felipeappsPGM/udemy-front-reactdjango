@@ -205,6 +205,7 @@ export const useRequests = () => ({
   //Groups / Permissions
   getPermissions,
   getGroups,
+  getAnGroup,
   addGroup,
   editGroup,
   deleteGroup,
