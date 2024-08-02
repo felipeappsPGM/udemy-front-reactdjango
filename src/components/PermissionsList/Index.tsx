@@ -23,7 +23,7 @@ const PermissionsList = ({
       setSelectedPermissions([...selectedPermissions, permission_id]);
     } else {
       setSelectedPermissions(
-        selectedPermissions.filter((fId) => fId === permission_id)
+        selectedPermissions.filter((fId) => fId != permission_id)
       );
     }
   };
