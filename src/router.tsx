@@ -37,6 +37,9 @@ const EditEmployee = Loader(
   lazy(() => import('src/content/pages/Employees/Edit'))
 );
 
+// Tasks
+const TasksERP = Loader(lazy(() => import('src/content/pages/Tasks/Tasks')));
+
 // Pages
 
 const Overview = Loader(lazy(() => import('src/content/overview')));
@@ -147,6 +150,18 @@ const routes: RouteObject[] = [
           {
             path: 'employees/edit/:id',
             element: <EditEmployee />
+          }
+        ]
+      },
+
+      // Tasks
+      {
+        path: '',
+        element: <SidebarLayout />,
+        children: [
+          {
+            path: 'tasks',
+            element: <TasksERP />
           }
         ]
       },

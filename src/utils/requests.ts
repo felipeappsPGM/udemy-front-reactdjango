@@ -194,7 +194,7 @@ const editTask = async (
 };
 
 const deleteTask = async (id: number) => {
-  const response = await useApi('companies/tasks/${id}', 'DELETE');
+  const response = await useApi(`companies/tasks/${id}`, 'DELETE');
   return response;
 };
 
