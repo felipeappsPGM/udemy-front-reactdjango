@@ -166,6 +166,8 @@ const addTask = async ({
     employee_id,
     status_id
   });
+
+  return response;
 };
 
 const editTask = async (

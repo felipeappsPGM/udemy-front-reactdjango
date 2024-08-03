@@ -35,7 +35,7 @@ const SelectEmployee = ({ selectedEmployee, setSelectedEmployee }: Props) => {
         >
           {employeesData.map((item) => (
             <MenuItem key={item.id} value={item.id}>
-              {item.id} - {item.email}=
+              {item.id} - {item.name} - {item.email}
             </MenuItem>
           ))}
         </Select>
