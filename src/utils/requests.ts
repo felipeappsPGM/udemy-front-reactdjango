@@ -193,6 +193,8 @@ const editTask = async (
     employee_id,
     status_id
   });
+
+  return response;
 };
 
 const deleteTask = async (id: number) => {
