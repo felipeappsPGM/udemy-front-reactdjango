@@ -15,7 +15,7 @@ const LogoWrapper = styled(Link)(
         display: flex;
         text-decoration: none;
         width: 53px;
-        margin: 0 auto;
+        margin: 0 0 0 70%;
         font-weight: ${theme.typography.fontWeightBold};
 `
 );
@@ -98,10 +98,7 @@ function Logo() {
   const theme = useTheme();
 
   return (
-    <TooltipWrapper
-      title="Tokyo Free Black React Typescript Admin Dashboard"
-      arrow
-    >
+    <TooltipWrapper title="GRF Sistema de Gestão Empresarial (ERP)" arrow>
       <LogoWrapper to="/overview">
         <Badge
           sx={{
@@ -113,7 +110,6 @@ function Logo() {
           }}
           overlap="circular"
           color="success"
-          badgeContent="2.0"
         >
           <LogoSignWrapper>
             <LogoSign>
